@@ -1,4 +1,4 @@
-package cellection;
+package celection;
 
 import java.util.Scanner;
 

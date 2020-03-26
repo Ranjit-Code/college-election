@@ -1,4 +1,4 @@
-package cellection;
+package celection;
 
 public class Credentials {
 	private String name;
