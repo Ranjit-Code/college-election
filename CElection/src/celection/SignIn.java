@@ -26,8 +26,8 @@ public class SignIn {
 		
 		/* to do later
 		 * database call first to retrieve the data on the basis of collegeId
-		 * check if the record exits, throws the message that use is already exists.
-		 * otherwise fire a database query to put the record in the database 
+		 * check if the record exits, enter into the profile module
+		 * otherwise throw the error message that use does not exist. 
 		 * */
 		
 		//redirect code to profile class.
