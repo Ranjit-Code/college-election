@@ -33,6 +33,8 @@ public class Signup {
 		 * */
 		
 		// this can be changed
+		System.out.println("Thank you for signup. Please enter your credentials to login into the system.");
+		System.out.println();
 		redirectToSignIn();
 	}
 	

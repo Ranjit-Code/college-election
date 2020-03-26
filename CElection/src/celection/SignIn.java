@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class SignIn {
 	boolean isValidated = false;
 	public void callToSignIn() throws Exception{
-		System.out.println("Enter your credentials");
 		Credentials cred = new Credentials();
 		System.out.println("Enter your credentials");
 		@SuppressWarnings("resource")
