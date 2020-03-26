@@ -13,12 +13,16 @@ public class Election {
 		Scanner regOrN = new Scanner(System.in);
 		String reg = regOrN.nextLine();
 		
-		if(reg.equalsIgnoreCase("Y")){
-			
-		}else if(reg.equalsIgnoreCase("N")){
-			
-		}else{
-			
+		try{
+			if(reg.equalsIgnoreCase("Y")){
+				
+			}else if(reg.equalsIgnoreCase("N")){
+				
+			}else{
+				throw new Exception();
+			}
+		}catch(Exception e){
+			System.out.println("Please enter valid input");
 		}
 	}
 }
