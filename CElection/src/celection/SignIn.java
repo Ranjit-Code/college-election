@@ -25,5 +25,7 @@ public class SignIn {
 		 * check if the record exits, throws the message that use is already exists.
 		 * otherwise fire a database query to put the record in the database 
 		 * */
+		
+		//redirect code to profile class.
 	}
 }
