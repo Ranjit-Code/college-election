@@ -30,6 +30,9 @@ public class SignIn {
 		 * otherwise throw the error message that use does not exist. 
 		 * */
 		
-		//redirect code to profile class.
+		//redirect code to profile class by passing 1 parameter {collegeid}.
+		
+		Profile pf = new Profile();
+		pf.dashboard(cred.getId());
 	}
 }
