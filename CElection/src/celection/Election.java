@@ -15,9 +15,10 @@ public class Election {
 		
 		try{
 			if(reg.equalsIgnoreCase("Y")){
-				
+				//to do
 			}else if(reg.equalsIgnoreCase("N")){
-				
+				DecideForSignupOrSignIn decide = new DecideForSignupOrSignIn();
+				decide.decide();
 			}else{
 				throw new Exception();
 			}
