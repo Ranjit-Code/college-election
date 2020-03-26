@@ -19,7 +19,8 @@ public class Election {
 		
 		try{
 			if(reg.equalsIgnoreCase("Y")){
-				//to do
+				Registrar rg = new Registrar();
+				rg.dashboard();	
 			}else if(reg.equalsIgnoreCase("N")){
 				DecideForSignupOrSignIn decide = new DecideForSignupOrSignIn();
 				decide.decide();

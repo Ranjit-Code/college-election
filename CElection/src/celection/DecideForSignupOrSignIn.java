@@ -27,10 +27,10 @@ public class DecideForSignupOrSignIn {
 				throw new Exception();
 			}
 		}else if(vote.equalsIgnoreCase("N")){
-			//to do
+			SignIn signin = new SignIn();
+			signin.callToSignIn();
 		}else{
 			throw new Exception();
 		}
 	}
-	
 }

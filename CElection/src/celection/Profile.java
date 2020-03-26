@@ -23,6 +23,9 @@ public class Profile {
 		 * time otherwise we have to show the assigned candidate. 
 		 * */
 		
+		/* below lines are only if login candidate is not chosen their candidate
+		 * from line 28 to 43 is skipped if the candidate already chosen. We just show the last
+		 * line.*/
 		HashMap<Integer,String> candidates = new HashMap<Integer, String>();
 		candidates.put(1, "Robin");
 		candidates.put(2, "Berney");
@@ -41,6 +44,8 @@ public class Profile {
 		System.out.println("Select your candidate");
 		int selectedCand = select.nextInt();
 		
+		/*in case of check the candidate here we need to do the db call 
+		 * and display the candidate selection*/
 		System.out.println("Thank you for voting. You have selected " + candidates.get(selectedCand));
 		
 		/* database call to save the selected candidate corresponding to the user
