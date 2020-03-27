@@ -24,13 +24,13 @@ public class DecideForSignupOrSignIn {
 				SignIn signin = new SignIn();
 				signin.callToSignIn();
 			}else {
-				throw new Exception();
+				throw new Exception("Wrong input. Please choose the valid option");
 			}
 		}else if(vote.equalsIgnoreCase("N")){
 			SignIn signin = new SignIn();
 			signin.callToSignIn();
 		}else{
-			throw new Exception();
+			throw new Exception("Wrong input. Please choose the valid option");
 		}
 	}
 }

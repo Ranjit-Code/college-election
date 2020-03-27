@@ -21,7 +21,7 @@ public class Registrar {
 			 * Need to show publish option if not published yet.
 			 * */
 		}else{
-			throw new Exception();
+			throw new Exception("Credentials mismatch. please try again!");
 		}
 	}
 }

@@ -25,10 +25,10 @@ public class Election {
 				DecideForSignupOrSignIn decide = new DecideForSignupOrSignIn();
 				decide.decide();
 			}else{
-				throw new Exception();
+				throw new Exception("Wrong input. Please choose the valid option");
 			}
 		}catch(Exception e){
-			System.out.println("Please enter valid input");
+			System.out.println(e.getMessage());
 		}
 	}
 }

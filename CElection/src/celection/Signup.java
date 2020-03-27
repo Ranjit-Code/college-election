@@ -13,17 +13,18 @@ public class Signup {
 	public void callToSignup() throws Exception{
 		Credentials cred = new Credentials();
 		System.out.println("Enter your credentials");
-		System.out.println("Enter your name: ");
+		System.out.println("Enter name: ");
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		cred.setName(sc.nextLine());
-		System.out.println("Enter your password: ");
-		cred.setPassword(sc.nextLine());
-		System.out.println("Enter your collegeId: ");
+		String password = PasswordField.readPassword("Enter password:");
+        System.out.println("Password entered was:" + password);
+		cred.setPassword(password);
+		System.out.println("Enter collegeId: ");
 		cred.setId(sc.nextLine());
 		isValidated = validateCredentails(cred);
 		if(!isValidated){
-			throw new Exception();
+			throw new Exception("Password doesnot match the requirements.");
 		}
 		
 		/* to do later

@@ -10,10 +10,10 @@ import java.util.Scanner;
 import java.util.Map.Entry;
 
 public class Profile {
-	public void dashboard(String collegeId){
+	public void dashboard(String collegeId) throws Exception{
 		/* Here a database call to retrieve the profile on the basis of college id
 		 * and store it in the username */
-		String username = "test";
+		//String username = "test";
 		System.out.println("Welcome " + collegeId  +  " to the college election portal");
 		System.out.println("Please select the candidate from the list");
 		
@@ -46,6 +46,9 @@ public class Profile {
 		
 		/*in case of check the candidate here we need to do the db call 
 		 * and display the candidate selection*/
+		if(candidates.get(selectedCand)== null){
+			throw new Exception("Candidate does not exists. Please choose again.");
+		}
 		System.out.println("Thank you for voting. You have selected " + candidates.get(selectedCand));
 		
 		/* database call to save the selected candidate corresponding to the user
