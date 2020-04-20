@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Registrar {
-	private static final String USERNAME = "k";
-	private static final String PASSWORD = "k";
+	private static final String USERNAME = "simrandeep";
+	private static final String PASSWORD = "simran@123";
 	private static boolean isPublished = false;
 	private static ArrayList<Candidate> cand = new ArrayList<Candidate>();
 
@@ -18,8 +18,8 @@ public class Registrar {
 		Scanner cred = new Scanner(System.in);
 		System.out.println("Enter your username");
 		String inUsername = cred.nextLine();
-		System.out.println("Enter your passowrd");
-		String inPassword = cred.nextLine();
+		
+		 String inPassword = PasswordField.readPassword("Enter password:");
 
 		if (inUsername.equalsIgnoreCase(USERNAME) && inPassword.equals(PASSWORD)) {
 			System.out.println("Welcome " + USERNAME + " to the college election portal");
@@ -54,9 +54,13 @@ public class Registrar {
 				String ch = in.nextLine();
 				if (ch.equalsIgnoreCase("p")) {
 					//To update the publish flag
-					String queryToUpdatepublish = "Update publish set isPublished = " + 1;
+					String queryToUpdatepublish = "Update publish set isPublished = 1 where id = 1";
+					//System.out.println(queryToUpdatepublish);
 					PreparedStatement preparedToUpdatepublish = DatabaseConnection.getConnection().prepareStatement(queryToUpdatepublish);
-					preparedToUpdatepublish.executeUpdate();
+					int res = preparedToUpdatepublish.executeUpdate();
+					if(res > 0){
+						//System.out.println("success");
+					}
 					setIsPublish(true);
 					printResult();
 				} else if(ch.equalsIgnoreCase("r")){
@@ -95,8 +99,8 @@ public class Registrar {
 		if(cand.size() == 1) {
 			Iterator<Candidate> itr = cand.iterator();
 			Candidate mapElement = itr.next();
-			System.out.println("Congratulations " + mapElement.getName()  + " has won the election election.");
-			System.out.println("Thank you for choosing our product for your college election.");
+			System.out.println("Congratulations!!! " + mapElement.getName()  + " has won the election .");
+			System.out.println("Thanks for voting..");
 		}else if(cand.size() == 2) {
 			System.out.println("Congratulations!!! There is tie up b/w 2 candidates.");
 			Iterator<Candidate> itr = cand.iterator();
@@ -105,15 +109,15 @@ public class Registrar {
 				System.out.println(mapElement.getName());
 			}
 			System.out.println("Lets flip the coin.");
-			System.out.println("Thank you for choosing our product for your college election.");
+			System.out.println("Thanks for voting.");
 		} else {
-			System.out.println("Congratulations!!! Following are the candidates has won the election.");
+			System.out.println("Congratulations!!! Following are the candidates who have won the election.");
 			Iterator<Candidate> itr = cand.iterator();
 			while (itr.hasNext()) {
 				Candidate mapElement = itr.next();
 				System.out.println(mapElement.getName());
 			}
-			System.out.println("Thank you for choosing our product for your college election.");
+			System.out.println("Thanks for voting.");
 		}
 	}
 }

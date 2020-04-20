@@ -39,7 +39,7 @@ public class Profile {
 			/* retrieving the record on the basis of college id */
 			ResultSet rs = stmt.executeQuery("select * from Candidate where id = " + cred.getAssignedCandidate());
 			if (rs.next()) {
-				System.out.println("You have chosen the " + rs.getString(2)
+				System.out.println("You have chosen " + rs.getString(2)
 						+ " as your candidate. You cannot make the second selection.");
 			} else {
 				throw new Exception("Something went wrong. Please try again");

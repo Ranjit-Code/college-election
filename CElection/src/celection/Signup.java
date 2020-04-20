@@ -28,7 +28,7 @@ public class Signup {
 
 		isValidated = validateCredentails(cred);
 		if (!isValidated) {
-			throw new Exception("Password doesnot match the requirements.");
+			throw new Exception("Password doesnot meet the requirements. It must have minimum of 8 characters including numeric and special characters.");
 		}
 
 		System.out.println("Enter collegeId: ");

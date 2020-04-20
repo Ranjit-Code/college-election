@@ -15,6 +15,8 @@ public class Reset {
 		stmt.executeUpdate("Delete from User;");
 		stmt.executeUpdate("update publish set isPublished = 0;");
 		stmt.executeUpdate("update Candidate set count = 0 where id in (1,2,3,4,5);");
+		
+		System.out.println("Reset successfully");
 	}
 
 }
